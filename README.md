@@ -19,38 +19,6 @@ You can install Pygame using pip:
 pip install pygame
 ```
 
-### **IMPORTANT: Updating Image File Paths**
-
-The image assets (cars, tracks, buttons, etc.) are loaded into the game using **absolute file paths**. This means the game will **not** run on your computer unless you update these paths to match the location of the files on your system.
-
-1. Open the `new car.py` file in a text editor.
-2. Near the top of the file (starting around line 23), you will find a block of code where all the images are loaded using `pygame.image.load()`. Here is an example:
-
-   ```python
-   # Storing all the images as variables 
-   img = pygame.image.load(r'C:\Users\valih\OneDrive\Documents\python projects\NEA\speed_8252022_layout_14.jpg').convert()
-   title = pygame.image.load(r'C:\Users\valih\OneDrive\Documents\python projects\NEA\title.png').convert()
-   # ... and so on for all other images
-   ```
-
-3. For each `pygame.image.load()` line, you must change the file path (the string inside the parentheses) to the correct location of the image files on your computer.
-
-   **Recommendation:** A good practice is to create a folder named `assets` or `images` in the same directory as the `new car.py` file, place all the images inside it, and then use relative paths. For example:
-
-   ```python
-   # Using relative paths (recommended)
-   img = pygame.image.load('assets/speed_8252022_layout_14.jpg').convert()
-   title = pygame.image.load('assets/title.png').convert()
-   ```
-
-### Running the Game
-
-Once you have updated the file paths, you can run the game by executing the Python script from your terminal:
-
-```bash
-python "new car.py"
-```
-
 ## How to Play
 
 * **Navigation:** Use the mouse to click through the menus.
